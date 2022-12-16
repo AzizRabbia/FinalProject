@@ -84,20 +84,19 @@ public class Player_Movement : MonoBehaviour
             PlayerMovementSpeed = 0f;
             final.Play();
             LeftRightSpeed = 0;
-        //if loaded scene is level 1,display panel 4(next level),otherwise display panel 5(Restart whole game)
-            if(SceneManager.GetActiveScene().buildIndex == 0)
+        //if loaded scene is level 1 or level 2,display panel 4(next level),otherwise display panel 5(Restart whole game)
+            if(SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
             {
                 ui.NextLevelPanel();
             }
             else
             { 
-                ui.LevelTwoFinishPanel();
+                ui.FinishPanel();
             }
             
         }
        
     }
-
     public void Movement()
     {
         transform.position += new Vector3(0, 0, PlayerMovementSpeed * Time.deltaTime);

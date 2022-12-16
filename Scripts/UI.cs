@@ -68,12 +68,12 @@ public class UI : MonoBehaviour
         panel4.SetActive(true);
     }
 
-    //calls when user finishes level2
-    public void LevelTwoFinishPanel()
+    //calls when user finishes level
+    public void FinishPanel()
     {
         panel5.SetActive(true);
     }
-    //load  the level 2
+    //load  the  next level
     public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -81,6 +81,6 @@ public class UI : MonoBehaviour
     //load the level 1
     public void LoadLevelOneScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 }
